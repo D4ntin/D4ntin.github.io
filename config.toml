@@ -1,4 +1,61 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'poison'
+baseURL = "/"
+languageCode = "en-us"
+theme = "poison"
+paginate = 10
+pluralizelisttitles = false
+
+[Author]
+    name = "Constantin Zach"
+
+[params]
+    brand_image = "/images/brand.webp"    # path to the image shown in the sidebar
+    description = ""
+    dark_mode = true                    # optional - defaults to false
+
+    # MENU PLACEHOLDER
+    # Menu dict keys:
+        # Name:         The name to display on the menu.
+        # URL:          The directory relative to the content directory.
+        # HasChildren:  If the directory's files should be listed.  Default is true.
+        # Limit:        If the files should be listed, how many should be shown.
+    menu = [
+        {Name = "About", URL = "/about/", HasChildren = false},
+        {Name = "Posts", URL = "/posts/", Pre = "Recent", HasChildren = true, Limit = 5},
+    ]
+
+    # Links to your socials.  Delete any you don't need/use. 
+    github_url = "https://github.com/D4ntin"
+    linkedin_url = "https://linkedin.com/in/constantin-zach-a29916249/"
+    instagram_url = "https://www.instagram.com/d4nt1n/"
+
+    # Hex colors for your sidebar.
+    sidebar_bg_color = "#2D353B"            # default is #202020
+    sidebar_img_border_color = "#D3C6AA"    # default is #515151
+    sidebar_p_color = "#D3C6AA"             # default is #909090
+    sidebar_h1_color = "#A7C080"            # default is #FFF
+    sidebar_a_color = "#83C092"             # default is #FFF
+    sidebar_socials_color = "#7FBBB3"       # default is #FFF
+    moon_color = "#7A8478"                  # default is #FFF
+    sun_color = "#DBBC7F"                   # default is #FFF
+    moon_sun_background_color = "#343F44"   # default is #515151
+    hr_color = "#3D484D"                    # default is #202020
+
+    # Hex colors for your content in light mode.
+    text_color = "#222"             # default is #222
+    content_bg_color = "#FAF9F6"    # default is #FAF9F6
+    post_title_color = "#303030"    # default is #303030
+    list_color = "#5a5a5a"          # default is #5a5a5a
+    link_color = "#268bd2"          # default is #268bd2
+    date_color = "#515151"          # default is #515151
+
+    # Hex colors for your content in dark mode
+    text_color_dark = "#DBBC7F"            # default is #eee
+    content_bg_color_dark = "#232A2E"   # default is #121212
+    post_title_color_dark = "#A7C080"   # default is #DBE2E9
+    list_color_dark = "#D3C6AA"         # default is #9d9d9d
+    link_color_dark = "#7FBBB3"         # default is #268bd2
+    date_color_dark = "#83C092"         # default is #9a9a9a
+
+[taxonomies]
+    series = 'series'
+    tags = 'tags'
